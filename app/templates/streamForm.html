@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <br><br>
+    <h3 style="text-align:center;">Dados para coleta</h3>
+    <form class="streamForm" action="" method="POST">
+        {{form.csrf_token}}
+        {% if error %}
+            <div class="alert alert-danger" role="alert">
+              {{error}}
+            </div>
+        {% endif %}
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="trackKeyword">trackKeyword</label>
+                {{form.trackKeyword(class= "form-control")}}
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="trackTimeout">trackTimeout</label>
+                {{form.trackTimeout(class= "form-control")}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="dbCollection">dbCollection</label>
+                {{form.dbCollection(class= "form-control")}}
+            </div>
+        </div>
+        <hr class="mb-4">
+        <div class="mb-3">
+            <button class="btn btn-lg btn-primary" type="submit">Salvar</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
