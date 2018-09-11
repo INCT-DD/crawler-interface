@@ -3,6 +3,7 @@
 <div class="container">
     <br><br>
     <h3 style="text-align:center;">Dados para coleta</h3>
+    <br><br>
     <form class="streamForm" action="" method="POST">
         {{form.csrf_token}}
         {% if error %}
@@ -10,24 +11,27 @@
               {{error}}
             </div>
         {% endif %}
-
+        {% if msg %}
+            <div class="alert alert-success" role="alert">
+              {{msg}}
+            </div>
+        {% endif %}
         <div class="row">
             <div class="col-md-6 mb-3">
-                <label for="trackKeyword">trackKeyword</label>
+                <label for="trackKeyword">Palavra para busca</label>
                 {{form.trackKeyword(class= "form-control")}}
             </div>
             <div class="col-md-6 mb-3">
-                <label for="trackTimeout">trackTimeout</label>
+                <label for="trackTimeout">Tempo de execução da busca</label>
                 {{form.trackTimeout(class= "form-control")}}
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 mb-3">
-                <label for="dbCollection">dbCollection</label>
+                <label for="dbCollection">Coleção</label>
                 {{form.dbCollection(class= "form-control")}}
             </div>
         </div>
-        <hr class="mb-4">
         <div class="mb-3">
             <button class="btn btn-lg btn-primary" type="submit">Salvar</button>
         </div>
