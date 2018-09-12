@@ -13,10 +13,18 @@
     text-decoration: none;
   }
 
-body, h1, h2, h3 {
+body, h1, h2, h3{
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 700;
+    color: #0F3C53; 
 }
+
+a, .navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
+    color: #0F3C53;
+  }
+  a:hover{
+    color: #EA6953;
+  }
 
 .container {
   max-width: 960px;
@@ -79,11 +87,12 @@ body, h1, h2, h3 {
     margin-right: auto;
 }
 
- .card:hover h1 a i:hover{
+ .card:hover h1>a>i:hover, h5>a {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     color: #EA6953;
  }
 
 .card-deck .card {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   min-width: 300px;
 }
