@@ -2,51 +2,52 @@
 {% block content %}
 <br><br>
 <div class="container">
-    <div class="card-deck mb-3 text-center">
-        <div class="row">
-            <!-- Column -->
-            <div class="card mb-4 shadow-sm">
-                <div class="card-body">
-                    <h1><a href="{{ url_for('stream') }}"><i class="fas fa-stream"></i></a></h1>
-                    <h5 class="card-title"></h5> <a href="{{ url_for('stream') }}"> Stream </a></h5>
-                </div>
-            </div>
-            <div class="card mb-4 shadow-sm">
-                <div class="card-body">
-                    <h1><i class="fas fa-chart-bar"></i></h1>
-                    <!--<h5 class="card-title"> <a href="{{ url_for('') }}"> Estatisticas</a> </h5>-->
-                </div>
-            </div>
-            <div class="card mb-4 shadow-sm">
-                <div class="card-body">
-                    <h1><i class="fas fa-user-friends"></i></h1>
-                    <!-- <h5 class="card-title"> <a href="{{ url_for('') }}"> Get Friends </a></h5>-->
-                </div>
+    <div class="card-deck mb-5 text-center">
+
+        <!-- Column -->
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h1><a href="{{ url_for('stream') }}"><i class="fas fa-stream"></i></a></h1>
+                <h5 class="card-title"><a href="{{ url_for('stream') }}"> Stream </a></h5>
             </div>
         </div>
-        <br><br>
-        <div class="row">
-            <div class="card mb-4 shadow-sm">
-                <div class="card-body">
-                    <h1><i class="fas fa-user-friends"></i></h1>
-                  <!--<h5 class="card-title"> <a href="{{ url_for('') }}"> Get Followers </a></h5>-->
-                </div>
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h1><a href="{{ url_for('statistics') }}"><i class="fas fa-chart-bar"></i></a></h1>
+                <h5 class="card-title"> <a href="{{ url_for('statistics') }}"> Estatisticas</a></h5>
             </div>
-
-            <div class="card mb-4 shadow-sm" >
-                <div class="card-body">
-                    <h1><i class="far fa-clock"></i></h1>
-                  <!-- <h5 class="card-title"> <a href="{{ url_for('') }}"> Timelines</a> </h5>-->
-                </div>
+        </div>
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h1> <a href="{{ url_for('getFriends') }}"><i class="fas fa-user-friends"></i></a></h1>
+                <h5 class="card-title"> <a href="{{ url_for('getFriends') }}"> Get Friends </a></h5>
             </div>
+        </div>
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h1><i class="fas fa-user-friends"></i></h1>
 
-            <div class="card mb-4 shadow-sm">
-                <div class="card-body">
-                    <h1><i class="fas fa-database"></i></h1>
-                   <!--<h5 class="card-title"> <a href="{{ url_for('') }}"> Tweet Dump</a> </h5>-->
-                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h1><i class="far fa-clock"></i></h1>
+
+            </div>
+        </div>
+
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h1><i class="fas fa-database"></i></h1>
+
             </div>
         </div>
     </div>
+    {% if msg %}
+    <div class="alert alert-success" role="alert">
+        {{msg}}
+    </div>
+    {% endif %}
 </div>
 {% endblock %}
