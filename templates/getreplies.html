@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <br><br>
+    <h3>Dados para coleta</h3>
+    <br><br>
+    <div class="container">
+        <form class="getRepliesForm" action="" method="POST">
+            {{form.csrf_token}}
+            {% if error %}
+            <div class="alert alert-danger" role="alert">
+                {{error}}
+            </div>
+            {% endif %}
+            {% if msg %}
+            <div class="alert alert-success" role="alert">
+                {{msg}}
+            </div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-4 order-md-2 mb-4">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-muted">O que coleta?</span>
+                    </h4>
+                    <p class="text-muted">Coleta as respostas dos últimos tweets da timeline de um perfil.</p>
+                </div>
+                  
+                <div class="col-md-6 order-md-1">
+                    <label for="profile">Usuário do Twitter</label>
+                    {{form.profile(class= "form-control", placeholder="Ex.: lulaoficial")}}
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <label for="numberTweets">Número de tweets</label>
+                    {{form.numberTweets(class= "form-control", placeholder="Ex.: 90000")}}
+                </div>
+            </div>
+            <br>
+            
+            <button class="btn btn-primary" type="submit">Pesquisar</button>
+            <a class="btn btn-secondary" href="{{ url_for('download') }}"} target="_blank"  style="margin-right: 10px;">Download csv </a>
+        </form>
+    </div>
+</div>
+{% endblock %}

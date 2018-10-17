@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="Sistema para dados do Twitter" content="Crawler para coleta de dados dos candidatos a presidencia do Brasil no Twitter">
+    <meta name="author" content="INCTDD">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link href="{{url_for('static', filename= 'css/bootstrap.min.css')}}" rel="stylesheet" >
+    <!--Customization-->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="{{url_for('static', filename= 'css/style2.css')}}" rel="stylesheet">
+
+    <title>Coleta de dados do Twitter</title>
+</head>
+<body>
+<div class="container">
+    <header class="home-header py-5">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-4 pt-1">
+                <a class="text" href="http://www.inctdd.org">INCT DD</a>
+            </div>
+            <div class="col-4 text-center">
+                <a class="home-header-logo text-dark" href="{{ url_for('index') }}">Coleta de dados do Twitter</a>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+                <a class="text" href="http://ufba.br/">UFBA</a>
+            </div>
+        </div>
+    </header>
+    <br><br>
+    {% block content %}
+    {% endblock %}
+</div>
+
+<!--<footer>
+    <div class="container">
+        <p class="float-right">
+
+            <a href="#">Back to top</a>
+
+        </p>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <p class="logo-footer">
+                    <img class="assign" src="http://www.inctdd.org/wp-content/uploads/2017/10/logotipo-footer.png" alt="INCT.DD">
+                </p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                <div class="row">
+                    <ul class="support">
+                        <li>
+                            <a href="http://cnpq.br" target="_blank">
+                                <img src="http://www.inctdd.org/wp-content/uploads/2017/12/inicio.png" alt="CNPq">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.fapesb.ba.gov.br" target="_blank">
+                                <img src="http://www.inctdd.org/wp-content/uploads/2017/12/inicio-1.png" alt="FAPESB">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.capes.gov.br" target="_blank">
+                                <img src="http://www.inctdd.org/wp-content/uploads/2017/12/inicio-2.png" alt="CAPES">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.brasil.gov.br/" target="_blank">
+                                <img src="http://www.inctdd.org/wp-content/uploads/2017/12/inicio-4.png" alt="Governo Federal">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <p>inct-dd: todos os direitos reservados</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"></div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <p class="social-info">siga-nos nas redes</p>
+                    <ul class="social-network"><li>
+                        <a href="https://twitter.com/inctdd" target="_blank">
+                            <i class="icon-twitter"></i>
+                        </a>
+                    </li>
+                        <li>
+                            <a href="https://www.facebook.com/inct.dd" target="_blank">
+                                <i class="icon-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCSn3y3M_j_viGTwBnMxJQJg" target="_blank">
+                                <i class="icon-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>-->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="{{url_for('static', filename= 'js/bootstrap.min.js')}}"></script>
+
+</body>
+</html>
+

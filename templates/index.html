@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+<br><br>
+<div class="container">
+    <div class="card-deck mb-5 text-center">
+        {% if msg %}
+        <div class="alert alert-success" role="alert">
+            {{msg}}
+        </div>
+        {% endif %}
+
+        <!-- Column -->
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h1><a href="{{ url_for('stream') }}"><i class="fas fa-stream"></i></a></h1>
+                <h5 class="card-title"><a href="{{ url_for('stream') }}"> Stream </a></h5>
+            </div>
+        </div>
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h1><a href="{{ url_for('search') }}"><i class="fas fa-search"></i></a></h1>
+                <h5 class="card-title"><a href="{{ url_for('search') }}"> Search </a></h5>
+            </div>
+        </div>
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h1><a href="{{ url_for('statistics') }}"><i class="fas fa-chart-bar"></i></a></h1>
+                <h5 class="card-title"> <a href="{{ url_for('statistics') }}"> Estatisticas</a></h5>
+            </div>
+        </div>
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h1> <a href="{{ url_for('getfriends') }}"><i class="fas fa-user-friends"></i></a></h1>
+                <h5 class="card-title"> <a href="{{ url_for('getfriends') }}"> Get Friends </a></h5>
+            </div>
+        </div>
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h1><a href="{{ url_for('getfollowers') }}"><i class="fas fa-user-friends"></i></a></h1>
+                <h5 class="card-title"><a href="{{ url_for('getfollowers') }}"> Get Followers </a></h5>
+            </div>
+        </div>
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h1><a href="{{ url_for('timelines') }}"><i class="far fa-clock"></i></a></h1>
+                <h5 class="card-title"> <a href="{{ url_for('timelines') }}"> Timelines </a></h5>
+            </div>
+        </div>
+
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h1><a href="{{ url_for('tweetdump') }}"> <i class="fas fa-database"></i></a></h1>
+                <h5 class="card-title"> <a href="{{ url_for('tweetdump') }}"> Tweet Dump </a></h5>
+            </div>
+        </div>
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h1><a href="{{ url_for('getreplies') }}"><i class="far fa-comment"></i></a></h1>
+                <h5 class="card-title"><a href="{{ url_for('getreplies') }}"> Threads </a></h5>
+            </div>
+            </div>
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h1><a href="{{ url_for('candidateslist') }}"><i class="fas fa-user-tie"></i></a></h1>
+                <h5 class="card-title"> <a href="{{ url_for('candidateslist') }}"> Lista de candidatos </a></h5>
+        </div>
+    </div>
+</div>
+{% endblock %}

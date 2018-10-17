@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <br><br>
+    <h3 style="text-align:center;">Dados para coleta</h3>
+    <br><br>
+    <div class="container">
+        <form class="friendsForm" action="" method="POST">
+            {{form.csrf_token}}
+            {% if error %}
+            <div class="alert alert-danger" role="alert">
+                {{error}}
+            </div>
+            {% endif %}
+            {% if msg %}
+            <div class="alert alert-success" role="alert">
+                {{msg}}
+            </div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-4 order-md-2 mb-4">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-muted">O que coleta?</span>
+                    </h4>
+                    <p class="text-muted">Retorna uma lista de usernames dos seguidores do usuário que ele também segue.</p>
+                </div>
+                        
+                <div class="col-md-8 order-md-1">
+                    <label for="username">Usuário do Twitter para coleta de friends</label>
+                    {{form.username(class= "form-control", placeholder="Ex.: lulaoficial")}}
+                </div>
+            </div>
+            <br>
+            
+                <button class="btn btn-lg btn-primary" type="submit">Pesquisar</button>
+           
+        </form>
+    </div>
+</div>
+{% endblock %}

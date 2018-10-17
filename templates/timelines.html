@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <br><br>
+    <h3 style="text-align:center;">Dados para coleta</h3>
+    <br><br>
+    <form class="timelines" action="" method="POST">
+        {{form.csrf_token}}
+        {% if error %}
+            <div class="alert alert-danger" role="alert">
+              {{error}}
+            </div>
+        {% endif %}
+        {% if msg %}
+            <div class="alert alert-success" role="alert">
+              {{msg}}
+            </div>
+        {% endif %}
+        <div class="row">
+                <label for="username">Palavra para busca</label>
+                {{form.username(class= "form-control", placeholder="Ex.: lulaOficial")}}
+        </div>
+        <br>
+        <div class="row mb-3">
+            <button class="btn btn-lg btn-primary" type="submit">Salvar</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
